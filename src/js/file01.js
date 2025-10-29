@@ -60,8 +60,10 @@ function renderProducts() {
                 productHTML = productHTML.replaceAll("[PRODUCT.PRODUCTURL]", product.productURL);
                 container.innerHTML += productHTML;
             });
-        }else{
+        }else {
             window.alert("XD");
         }
     })
 }
+
+export { renderProducts }
