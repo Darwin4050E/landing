@@ -1,6 +1,7 @@
 "use strict";
 
 import { fetchProducts, fetchCategories } from "/src/js/functions.js";
+import { enableForm } from "/src/js/firebase.js";
 
 /**
  * Muestra un mensaje tipo "toast" si existe el elemento con id "toast-interactive" en el DOM.
@@ -41,6 +42,7 @@ const showVideo = () => {
     showVideo();
     renderProducts();
     renderCategories();
+    enableForm();
 })();
 
 /**
