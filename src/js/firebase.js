@@ -17,7 +17,7 @@ const database = getDatabase(app);
 
 let saveVotes = (productId) => {
     // Referencia a la colección 'votes'
-    const votesRef = ref(db, "votes");
+    const votesRef = ref(database, "votes");
     // Crear nueva referencia única
     const newVoteRef = push(votesRef);
     // Guardar los datos con set()
@@ -43,11 +43,7 @@ let enableForm = () => {
             const productId = document.getElementById("select_product").value;
             saveVotes(productId)
                 .then(response => {
-                    if(response.status){
-                        alert(response.message);
-                    }else{
-                        alert(response.message);
-                    }
+                    alert(response.message);
                 });
         });
     }
