@@ -17,10 +17,6 @@ const showToast = () => {
     }
 };
 
-(() => {
-    showToast();
-})();
-
 /**
  * Agrega un evento al elemento con id "demo" para abrir un video en YouTube al hacer clic.
  *
@@ -57,7 +53,6 @@ const showVideo = () => {
 function renderProducts() {
     fetchProducts("https://data-dawm.github.io/datum/reseller/products.json")
     .then(result => {
-        console.log(result);
         if (result.success == true) {
             let container = document.getElementById("products-container");
             container.innerHTML = "";
